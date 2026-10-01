@@ -149,7 +149,8 @@ _genv.firetouchinterest = _noop
 _stubbed.firetouchinterest = true
 end
 if type(_genv.queue_on_teleport) ~= 'function' then
-local _qot = (type(queueonteleport) == 'function' and queueonteleport)
+local _qot = (type(queue_on_teleport) == 'function' and queue_on_teleport)
+or (type(queueonteleport) == 'function' and queueonteleport)
 or (type(syn) == 'table' and type(syn.queue_on_teleport) == 'function' and syn.queue_on_teleport)
 or nil
 if _qot then
@@ -11739,41 +11740,10 @@ end
 __ZkhHub_shared.script_paths = function()
 local DisplayName = 'ZkxHub'
 local StorageRoot = 'ZkxHub'
--- The real script lives here, inside the executor workspace, because readfile can't
--- reach Potassium's scripts\ folder. scripts\Rivals.luau is only a launcher for it,
--- and Auto Execute re-runs this same file after every teleport (lobby <-> match).
-local SourcePath = StorageRoot .. '/Rivals.luau'
-local RivalsGameId = 6035872082
--- Left behind by older builds; removed on startup so nothing runs it by mistake.
-local LegacyRunnablePath = StorageRoot .. '/ZkxHub_Source_Runnable.lua'
+local LoaderUrl = 'https://raw.githubusercontent.com/ZkxrI/loader/refs/heads/main/load'
+local LocalScriptPath = StorageRoot .. '/ZkxHub_Source_Runnable.lua'
 local AutoShowPath = StorageRoot .. '/AutoShow.txt'
 local UiSettingsPath = StorageRoot .. '/UISettings.json'
--- Handed to queue_on_teleport; runs once in the next server. Used to queue the remote
--- loader, which only handles the lobby PlaceId and silently did nothing in matches.
-local QueuePayloadFormat = [==[
-local env = (type(getgenv) == 'function' and getgenv()) or _G
-if env.ZkxHubAutoExecRan then return end
-env.ZkxHubAutoExecRan = true
-local deadline = os.clock() + 30
-while game.GameId == 0 and os.clock() < deadline do task.wait(0.1) end
-if game.GameId ~= %s then return end
-local ok, ui = pcall(function()
-return game:GetService('HttpService'):JSONDecode(readfile(%s))
-end)
-if ok and type(ui) == 'table' and ui.auto_execute_on_teleport == false then return end
-local path = %s
-if not isfile(path) then
-warn('[ZkxHub] Auto Execute: workspace/' .. path .. ' is missing')
-return
-end
-local chunk, err = loadstring(readfile(path), '@' .. path)
-if not chunk then
-warn('[ZkxHub] Auto Execute: ' .. tostring(err))
-return
-end
-env.ZkxHubLaunchedFromWorkspace = true
-chunk()
-]==]
 local HttpService = game:GetService('HttpService')
 local DefaultUiSettings = {
 auto_show = true,
@@ -11889,25 +11859,24 @@ local ui_settings = module.load_ui_settings()
 writefile(path, ui_settings.auto_show and 'true' or 'false')
 return path
 end
-function module.source_path()
-return SourcePath
-end
 function module.queue_on_teleport_script()
-return string.format(QueuePayloadFormat, tostring(RivalsGameId), string.format('%q', UiSettingsPath), string.format('%q', SourcePath))
+return 'pcall(function() local __g=(type(getgenv)=="function" and getgenv()) or _G; __g.Executed=nil; pcall(function() _G._ZkxHubExecuted=nil end); loadstring(game:HttpGet("https://raw.githubusercontent.com/Zkxrll/mmh/refs/heads/main/R1V4LZ"))() end)'
 end
 function module.ensure_runnable_copy()
 if type(isfile) == 'function' and type(delfile) == 'function' then
 pcall(function()
-if isfile(LegacyRunnablePath) then
-delfile(LegacyRunnablePath)
+if isfile(LocalScriptPath) then
+delfile(LocalScriptPath)
 end
 end)
 end
-return module.has_runnable_copy()
+if type(LoaderUrl) == 'string' and LoaderUrl ~= '' then
+return true, 'loader'
+end
+return false, 'no loader url'
 end
 function module.has_runnable_copy()
-local ok, exists = pcall(isfile, SourcePath)
-return ok and exists == true
+return type(LoaderUrl) == 'string' and LoaderUrl ~= ''
 end
 function module.format_title()
 return DisplayName
@@ -12057,7 +12026,6 @@ local persisted_defaults = script_paths.load_ui_settings(defaults)
 local persist_menu_keybind = args.persist_menu_keybind ~= false
 local settings = {}
 local queue_on_teleport_connection = nil
-local queued_for_teleport = false
 local shutting_down = false
 local config_load_suppression_count = 0
 local auto_save_token = 0
@@ -12276,16 +12244,10 @@ if not __ZkhHub_genv.ZkxHubCaps.gate('Auto Execute', 'queue_on_teleport') then
 return
 end
 if queue_on_teleport_connection then return end
--- Queue on the first teleport state instead of waiting for InProgress (the last one
--- before the client leaves). Failed re-arms for the next attempt; the payload dedupes.
 queue_on_teleport_connection = local_player.OnTeleport:Connect(function(state)
-if state == Enum.TeleportState.Failed then
-queued_for_teleport = false
-return
-end
-if queued_for_teleport then return end
-queued_for_teleport = true
+if state == Enum.TeleportState.InProgress then
 queue_loader()
+end
 end)
 else
 disconnect_queue_on_teleport()
@@ -42177,12 +42139,6 @@ RivalsRuntimeBridge.ApplyRivalsCosmetics()
 RivalsRuntimeBridge.QueueAutoLoadoutSubmission()
 SharedUI:notify_loaded(5)
 task.defer(GuardRivalsCallback('AutoExec_Diagnostic', function()
--- Set by the scripts\Rivals.luau launcher and by the teleport payload.
-local fromWorkspace = false
-pcall(function()
-fromWorkspace = __ZkhHub_genv.ZkxHubLaunchedFromWorkspace == true
-__ZkhHub_genv.ZkxHubLaunchedFromWorkspace = nil
-end)
 local autoExecOn = false
 pcall(function() autoExecOn = (Toggles.P3S1T4 and Toggles.P3S1T4.Value) == true end)
 if not autoExecOn then return end
@@ -42190,22 +42146,14 @@ local hasQueue = false
 pcall(function() hasQueue = __ZkhHub_genv.ZkxHubCaps.has('queue_on_teleport') == true end)
 local hasCopy = false
 pcall(function() hasCopy = ScriptPaths.has_runnable_copy() == true end)
-if hasQueue and hasCopy and fromWorkspace then
+if hasQueue and hasCopy then
 return
 end
-local sourcePath = 'workspace/' .. ScriptPaths.source_path()
-local title = 'Auto Execute unavailable'
-local why
-if not hasQueue then
-why = 'Your executor has no queue-on-teleport API, so Auto Execute cannot re-run the script after a teleport.'
-elseif not hasCopy then
-why = sourcePath .. ' is missing, so Auto Execute has nothing to re-run.'
-else
-title = 'Auto Execute'
-why = 'After a teleport this re-runs ' .. sourcePath .. ', not the copy you just ran. Launch scripts/Rivals.luau to keep them the same.'
-end
+local why = (not hasQueue)
+and 'Your executor has no queue-on-teleport API, so Auto Execute cannot re-run the script after a teleport.'
+or 'Queue API works, but no loader URL is configured, so Auto Execute has nothing to re-run.'
 pcall(function()
-Library:Notify({ Title = title, Description = why, Time = 10 })
+Library:Notify({ Title = 'Auto Execute unavailable', Description = why, Time = 10 })
 end)
 end))
 task.defer(GuardRivalsCallback('AutoLoadConfig_Deterministic', function()
