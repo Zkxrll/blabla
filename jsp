@@ -11860,7 +11860,7 @@ writefile(path, ui_settings.auto_show and 'true' or 'false')
 return path
 end
 function module.queue_on_teleport_script()
-return 'pcall(function() local __g=(type(getgenv)=="function" and getgenv()) or _G; __g.Executed=nil; pcall(function() _G._ZkxHubExecuted=nil end); loadstring(game:HttpGet("https://raw.githubusercontent.com/Zkxrll/mmh/refs/heads/main/R1V4LZ"))() end)'
+return 'pcall(function() local __g=(type(getgenv)=="function" and getgenv()) or _G; __g.Executed=nil; pcall(function() _G._ZkxHubExecuted=nil end); if not game:IsLoaded() then game.Loaded:Wait() end; task.wait(8); loadstring(game:HttpGet("https://raw.githubusercontent.com/Zkxrll/mmh/refs/heads/main/R1V4LZ"))() end)'
 end
 function module.ensure_runnable_copy()
 if type(isfile) == 'function' and type(delfile) == 'function' then
