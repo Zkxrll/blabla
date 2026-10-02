@@ -1,0 +1,1189 @@
+-- GLOBAL (nil): CDlElokdhPCuP
+-- GLOBAL (nil): xO5rP6jmtiaCU
+-- GLOBAL (nil): 0UZsd8gWN4Gu
+-- GLOBAL (nil): gOd3Hii1Uvyr
+-- HTTP GET "https://raw.githubusercontent.com/Severitysvc/Overlay-Library/refs/heads/main/Library.lua"
+-- (mocking remote library Library from https://raw.githubusercontent.com/Severitysvc/Overlay-Library/refs/heads/main/Library.lua)
+-- loadstring(21 bytes): "return __MOCK_Library"
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local UserInputService = game:GetService("UserInputService")
+RunService:IsStudio()  --> false
+-- getgenv().gethui read -> nil
+local CoreGui = game:GetService("CoreGui")
+-- getgenv().protectgui read -> nil
+local v_1 = Library:SetLibraryDebugs(false)
+local v_2 = Library:SetHidden(true)
+local v_3 = Library:SetIconPack("solar")
+-- HTTP GET "https://sdkapi-public.luarmor.net/library.lua"
+-- (mocking remote library Luarmor from https://sdkapi-public.luarmor.net/library.lua)
+-- loadstring(21 bytes): "return __MOCK_Luarmor"
+-- GLOBAL (nil): C3zT1BVo5tTQ3
+local ScreenGui_4 = Instance.new("ScreenGui")
+ScreenGui_4.ResetOnSpawn = true
+-- GLOBAL (nil): ZpgXHUPxDP4nr2
+ScreenGui_4.Parent = CoreGui
+-- GLOBAL (nil): UsYJysQezM4r
+ScreenGui_4.Name = "KeySystem"
+ScreenGui_4.Name = ""
+ScreenGui_4.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+-- GLOBAL (nil): 1E2RwOJCQrfaZ7
+local v_5 = UDim2.new(0.5, 0, 0.5, 0)
+local v_6 = UDim2.new(0, 540, 0, 0)
+local v_7 = Vector2.new(0.5, 0.5)
+local v_8 = Color3.fromRGB(9, 9, 9)
+local Frame_9 = Instance.new("Frame")
+Frame_9.Visible = false
+Frame_9.Parent = ScreenGui_4
+Frame_9.AnchorPoint = v_7
+Frame_9.BorderSizePixel = 0
+Frame_9.Name = "Window"
+Frame_9.Name = ""
+Frame_9.Position = v_5
+Frame_9.BackgroundTransparency = 0.1
+Frame_9.BackgroundColor3 = v_8
+Frame_9.AutomaticSize = Enum.AutomaticSize.Y
+Frame_9.Size = v_6
+local v_10 = UDim.new(0, 15)
+local UICorner_11 = Instance.new("UICorner")
+UICorner_11.Parent = Frame_9
+UICorner_11.Name = "UICorner"
+UICorner_11.Name = ""
+UICorner_11.CornerRadius = v_10
+local Folder_12 = Instance.new("Folder")
+Folder_12.Name = "IgnoreLayout"
+Folder_12.Name = ""
+Folder_12.Parent = Frame_9
+local v_13 = UDim2.new(0, -12, 0, -12)
+local v_14 = UDim2.new(1, 24, 1, 24)
+local ImageLabel_15 = Instance.new("ImageLabel")
+ImageLabel_15.ScaleType = Enum.ScaleType.Crop
+ImageLabel_15.ImageTransparency = 0.9
+ImageLabel_15.Parent = Folder_12
+ImageLabel_15.Image = "rbxassetid://82295031952284"
+ImageLabel_15.Name = "BackgroundImage"
+ImageLabel_15.Name = ""
+ImageLabel_15.Position = v_13
+ImageLabel_15.ZIndex = -1
+ImageLabel_15.BackgroundTransparency = 1
+ImageLabel_15.Size = v_14
+local v_16 = UDim.new(0, 15)
+local UICorner_17 = Instance.new("UICorner")
+UICorner_17.Parent = ImageLabel_15
+UICorner_17.Name = "UICorner"
+UICorner_17.Name = ""
+UICorner_17.CornerRadius = v_16
+local v_18 = Color3.fromRGB(255, 255, 255)
+local UIStroke_19 = Instance.new("UIStroke")
+UIStroke_19.Thickness = 1
+UIStroke_19.Transparency = 0.9
+UIStroke_19.Name = "UIStroke"
+UIStroke_19.Name = ""
+UIStroke_19.Color = v_18
+UIStroke_19.Parent = Frame_9
+UIStroke_19.LineJoinMode = Enum.LineJoinMode.Round
+UIStroke_19.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+local v_20 = UDim2.new(0, 0, -0.004, 0)
+local v_21 = UDim2.new(1, 0, 0, 0)
+local Frame_22 = Instance.new("Frame")
+Frame_22.Name = "Topbar"
+Frame_22.Name = ""
+Frame_22.Position = v_20
+Frame_22.Parent = Frame_9
+Frame_22.BackgroundTransparency = 1
+Frame_22.AutomaticSize = Enum.AutomaticSize.Y
+Frame_22.Size = v_21
+local v_23 = UDim2.new(0.75, 0, 1, 0)
+local Frame_24 = Instance.new("Frame")
+Frame_24.Parent = Frame_22
+Frame_24.BackgroundTransparency = 1
+Frame_24.Name = "LeftLayout"
+Frame_24.Name = ""
+Frame_24.Size = v_23
+local v_25 = UDim2.new(0, 0, 1, 0)
+local Frame_26 = Instance.new("Frame")
+Frame_26.Name = "Header"
+Frame_26.Name = ""
+Frame_26.Parent = Frame_24
+Frame_26.BackgroundTransparency = 1
+Frame_26.AutomaticSize = Enum.AutomaticSize.X
+Frame_26.Size = v_25
+local UIListLayout_27 = Instance.new("UIListLayout")
+UIListLayout_27.Parent = Frame_26
+UIListLayout_27.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_27.Name = "UIListLayout"
+UIListLayout_27.Name = ""
+local v_28 = Color3.fromRGB(255, 255, 255)
+local v_29 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+local TextLabel_30 = Instance.new("TextLabel")
+TextLabel_30.FontFace = v_29
+TextLabel_30.TextColor3 = v_28
+TextLabel_30.TextTransparency = 0.2
+TextLabel_30.Text = "Perseus Key System"
+TextLabel_30.Name = "Title"
+TextLabel_30.Name = ""
+TextLabel_30.Parent = Frame_26
+TextLabel_30.TextSize = 20
+TextLabel_30.AutomaticSize = Enum.AutomaticSize.XY
+TextLabel_30.BackgroundTransparency = 1
+local v_31 = Color3.fromRGB(255, 255, 255)
+local v_32 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_33 = Instance.new("TextLabel")
+TextLabel_33.TextWrapped = true
+TextLabel_33.TextColor3 = v_31
+TextLabel_33.TextTransparency = 0.4
+TextLabel_33.Text = "Complete the key system to unlock the script"
+TextLabel_33.Parent = Frame_26
+TextLabel_33.Name = "Subtitle"
+TextLabel_33.Name = ""
+TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_33.FontFace = v_32
+TextLabel_33.TextSize = 14
+TextLabel_33.AutomaticSize = Enum.AutomaticSize.XY
+TextLabel_33.BackgroundTransparency = 1
+local v_34 = UDim2.new(0.25, 0, 1, 0)
+local Frame_35 = Instance.new("Frame")
+Frame_35.Parent = Frame_22
+Frame_35.BackgroundTransparency = 1
+Frame_35.Name = "RightLayout"
+Frame_35.Name = ""
+Frame_35.Size = v_34
+local v_36 = UDim2.new(0, 30, 0, 30)
+local TextButton_37 = Instance.new("TextButton")
+TextButton_37.LayoutOrder = 999
+TextButton_37.Name = "Button"
+TextButton_37.Name = ""
+TextButton_37.Parent = Frame_35
+TextButton_37.Text = ""
+TextButton_37.BackgroundTransparency = 1
+TextButton_37.Size = v_36
+local v_38 = UDim.new(0, 8)
+local UICorner_39 = Instance.new("UICorner")
+UICorner_39.Parent = TextButton_37
+UICorner_39.Name = "UICorner"
+UICorner_39.Name = ""
+UICorner_39.CornerRadius = v_38
+local v_40 = UDim2.new(0.5, 0, 0.5, 0)
+local v_41 = UDim2.new(0, 16, 0, 16)
+local v_42 = Vector2.new(0.5, 0.5)
+local ImageLabel_43 = Instance.new("ImageLabel")
+ImageLabel_43.ScaleType = Enum.ScaleType.Stretch
+ImageLabel_43.ImageTransparency = 0.4
+ImageLabel_43.Parent = TextButton_37
+ImageLabel_43.AnchorPoint = v_42
+ImageLabel_43.Image = "rbxassetid://10747384394"
+ImageLabel_43.Name = "ImageLabel"
+ImageLabel_43.Name = ""
+ImageLabel_43.Position = v_40
+ImageLabel_43.BackgroundTransparency = 1
+ImageLabel_43.Size = v_41
+local v_44 = UDim2.new(0, 30, 0, 30)
+local TextButton_45 = Instance.new("TextButton")
+TextButton_45.LayoutOrder = 998
+TextButton_45.Name = "Button"
+TextButton_45.Name = ""
+TextButton_45.Parent = Frame_35
+TextButton_45.Text = ""
+TextButton_45.BackgroundTransparency = 1
+TextButton_45.Size = v_44
+local v_46 = UDim.new(0, 8)
+local UICorner_47 = Instance.new("UICorner")
+UICorner_47.Parent = TextButton_45
+UICorner_47.Name = "UICorner"
+UICorner_47.Name = ""
+UICorner_47.CornerRadius = v_46
+local v_48 = UDim2.new(0.5, 0, 0.5, 0)
+local v_49 = UDim2.new(0, 16, 0, 16)
+local v_50 = Vector2.new(0.5, 0.5)
+local ImageLabel_51 = Instance.new("ImageLabel")
+ImageLabel_51.LayoutOrder = 0
+ImageLabel_51.ScaleType = Enum.ScaleType.Stretch
+ImageLabel_51.ImageTransparency = 0.4
+ImageLabel_51.Parent = TextButton_45
+ImageLabel_51.AnchorPoint = v_50
+ImageLabel_51.Image = "rbxassetid://10734896206"
+ImageLabel_51.Name = "ImageLabel"
+ImageLabel_51.Name = ""
+ImageLabel_51.Position = v_48
+ImageLabel_51.BackgroundTransparency = 1
+ImageLabel_51.Size = v_49
+local v_52 = UDim.new(0, 6)
+local UIListLayout_53 = Instance.new("UIListLayout")
+UIListLayout_53.VerticalAlignment = Enum.VerticalAlignment.Top
+UIListLayout_53.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_53.Name = "UIListLayout"
+UIListLayout_53.Name = ""
+UIListLayout_53.Parent = Frame_35
+UIListLayout_53.Padding = v_52
+UIListLayout_53.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_53.HorizontalAlignment = Enum.HorizontalAlignment.Right
+local v_54 = UDim.new(0, 0)
+local UIListLayout_55 = Instance.new("UIListLayout")
+UIListLayout_55.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_55.Name = "UIListLayout"
+UIListLayout_55.Name = ""
+UIListLayout_55.Parent = Frame_22
+UIListLayout_55.Padding = v_54
+UIListLayout_55.SortOrder = Enum.SortOrder.LayoutOrder
+local v_56 = UDim.new(0, 10)
+local UIListLayout_57 = Instance.new("UIListLayout")
+UIListLayout_57.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_57.Name = "UIListLayout"
+UIListLayout_57.Name = ""
+UIListLayout_57.Parent = Frame_9
+UIListLayout_57.Padding = v_56
+UIListLayout_57.Wraps = true
+UIListLayout_57.SortOrder = Enum.SortOrder.LayoutOrder
+local v_58 = UDim.new(0, 12)
+local v_59 = UDim.new(0, 12)
+local v_60 = UDim.new(0, 12)
+local v_61 = UDim.new(0, 12)
+local UIPadding_62 = Instance.new("UIPadding")
+UIPadding_62.PaddingTop = v_58
+UIPadding_62.Name = "UIPadding"
+UIPadding_62.Name = ""
+UIPadding_62.PaddingBottom = v_59
+UIPadding_62.Parent = Frame_9
+UIPadding_62.PaddingLeft = v_60
+UIPadding_62.PaddingRight = v_61
+local v_63 = UDim2.new(0, 0, 0.177, 0)
+local v_64 = UDim2.new(0.5, -12, 0, 0)
+local Frame_65 = Instance.new("Frame")
+Frame_65.BackgroundTransparency = 1
+Frame_65.Name = "LeftContent"
+Frame_65.Name = ""
+Frame_65.Position = v_63
+Frame_65.Parent = Frame_9
+Frame_65.ClipsDescendants = true
+Frame_65.AutomaticSize = Enum.AutomaticSize.Y
+Frame_65.Size = v_64
+local v_66 = UDim.new(0, 1)
+local v_67 = UDim.new(0, 1)
+local UIPadding_68 = Instance.new("UIPadding")
+UIPadding_68.PaddingBottom = v_66
+UIPadding_68.Parent = Frame_65
+UIPadding_68.Name = "UIPadding"
+UIPadding_68.Name = ""
+UIPadding_68.PaddingLeft = v_67
+local v_69 = UDim2.new(1, 0, 0, 130)
+local Frame_70 = Instance.new("Frame")
+Frame_70.Name = "Tutorial"
+Frame_70.Name = ""
+Frame_70.Parent = Frame_65
+Frame_70.BackgroundTransparency = 1
+Frame_70.AutomaticSize = Enum.AutomaticSize.Y
+Frame_70.Size = v_69
+local v_71 = UDim2.new(1, 0, 0, 0)
+local v_72 = Color3.fromRGB(255, 255, 255)
+local v_73 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+local TextLabel_74 = Instance.new("TextLabel")
+TextLabel_74.FontFace = v_73
+TextLabel_74.TextColor3 = v_72
+TextLabel_74.TextTransparency = 0.4
+TextLabel_74.Text = "Guide To Get Key"
+TextLabel_74.Parent = Frame_70
+TextLabel_74.Name = "Header"
+TextLabel_74.Name = ""
+TextLabel_74.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_74.TextSize = 17
+TextLabel_74.BackgroundTransparency = 1
+TextLabel_74.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_74.Size = v_71
+local v_75 = UDim2.new(1, 0, 0, 0)
+local v_76 = Color3.fromRGB(255, 255, 255)
+local v_77 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_78 = Instance.new("TextLabel")
+TextLabel_78.TextWrapped = true
+TextLabel_78.TextColor3 = v_76
+TextLabel_78.TextTransparency = 0.6
+TextLabel_78.Text = "1. Click on the 'Get Key' button (which will copy a link to your clipboard)"
+TextLabel_78.Parent = Frame_70
+TextLabel_78.FontFace = v_77
+TextLabel_78.Name = "Step1"
+TextLabel_78.Name = ""
+TextLabel_78.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_78.TextSize = 14
+TextLabel_78.BackgroundTransparency = 1
+TextLabel_78.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_78.Size = v_75
+local v_79 = UDim.new(0, 3)
+local UIListLayout_80 = Instance.new("UIListLayout")
+UIListLayout_80.Parent = Frame_70
+UIListLayout_80.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_80.Name = "UIListLayout"
+UIListLayout_80.Name = ""
+UIListLayout_80.Padding = v_79
+local v_81 = UDim.new(0, 2)
+local v_82 = UDim.new(0, 12)
+local UIPadding_83 = Instance.new("UIPadding")
+UIPadding_83.PaddingBottom = v_82
+UIPadding_83.PaddingTop = v_81
+UIPadding_83.Name = "UIPadding"
+UIPadding_83.Name = ""
+UIPadding_83.Parent = Frame_70
+local v_84 = UDim2.new(1, 0, 0, 0)
+local v_85 = Color3.fromRGB(255, 255, 255)
+local v_86 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_87 = Instance.new("TextLabel")
+TextLabel_87.TextWrapped = true
+TextLabel_87.TextColor3 = v_85
+TextLabel_87.TextTransparency = 0.6
+TextLabel_87.Text = "2. Open the copied link in your browser and complete the steps"
+TextLabel_87.Parent = Frame_70
+TextLabel_87.FontFace = v_86
+TextLabel_87.Name = "Step2"
+TextLabel_87.Name = ""
+TextLabel_87.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_87.TextSize = 14
+TextLabel_87.BackgroundTransparency = 1
+TextLabel_87.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_87.Size = v_84
+local v_88 = UDim2.new(-0.004, 0, 0.716, 0)
+local v_89 = UDim2.new(1, 0, 0, 0)
+local v_90 = Color3.fromRGB(255, 255, 255)
+local v_91 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_92 = Instance.new("TextLabel")
+TextLabel_92.TextWrapped = true
+TextLabel_92.TextColor3 = v_90
+TextLabel_92.TextTransparency = 0.6
+TextLabel_92.Text = "3. Once the steps are completed, you'll be rewarded a key that you can use here."
+TextLabel_92.Parent = Frame_70
+TextLabel_92.FontFace = v_91
+TextLabel_92.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_92.Name = "Step3"
+TextLabel_92.Name = ""
+TextLabel_92.Position = v_88
+TextLabel_92.TextSize = 14
+TextLabel_92.BackgroundTransparency = 1
+TextLabel_92.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_92.Size = v_89
+local UIListLayout_93 = Instance.new("UIListLayout")
+UIListLayout_93.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_93.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_93.Name = "UIListLayout"
+UIListLayout_93.Name = ""
+UIListLayout_93.Parent = Frame_65
+local v_94 = UDim2.new(1, 0, 0, 40)
+local Frame_95 = Instance.new("Frame")
+Frame_95.Parent = Frame_65
+Frame_95.BackgroundTransparency = 0.97
+Frame_95.Name = "Keybox"
+Frame_95.Name = ""
+Frame_95.Size = v_94
+local v_96 = UDim.new(0, 12)
+local UICorner_97 = Instance.new("UICorner")
+UICorner_97.Parent = Frame_95
+UICorner_97.Name = "UICorner"
+UICorner_97.Name = ""
+UICorner_97.CornerRadius = v_96
+local v_98 = Color3.fromRGB(255, 255, 255)
+local UIStroke_99 = Instance.new("UIStroke")
+UIStroke_99.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke_99.Transparency = 0.94
+UIStroke_99.Name = "UIStroke"
+UIStroke_99.Name = ""
+UIStroke_99.Color = v_98
+UIStroke_99.Parent = Frame_95
+local v_100 = UDim2.new(1, 0, 1, 0)
+local v_101 = Color3.fromRGB(255, 255, 255)
+local v_102 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+local v_103 = Color3.fromRGB(200, 200, 200)
+local TextBox_104 = Instance.new("TextBox")
+TextBox_104.FontFace = v_102
+TextBox_104.TextColor3 = v_101
+TextBox_104.TextTransparency = 0.2
+TextBox_104.Text = ""
+TextBox_104.Parent = Frame_95
+TextBox_104.PlaceholderColor3 = v_103
+TextBox_104.BackgroundTransparency = 1
+TextBox_104.Name = "TextBox"
+TextBox_104.Name = ""
+TextBox_104.TextXAlignment = Enum.TextXAlignment.Left
+TextBox_104.TextTruncate = Enum.TextTruncate.AtEnd
+TextBox_104.PlaceholderText = "Key..."
+TextBox_104.TextSize = 16
+TextBox_104.Size = v_100
+local v_105 = UDim.new(0, 12)
+local v_106 = UDim.new(0, 12)
+local UIPadding_107 = Instance.new("UIPadding")
+UIPadding_107.Parent = TextBox_104
+UIPadding_107.PaddingRight = v_106
+UIPadding_107.Name = "UIPadding"
+UIPadding_107.Name = ""
+UIPadding_107.PaddingLeft = v_105
+local v_108 = UDim2.new(1, -4, 0.5, 0)
+local v_109 = UDim2.new(0, 35, 0, 35)
+local v_110 = Vector2.new(1, 0.5)
+local Frame_111 = Instance.new("Frame")
+Frame_111.AnchorPoint = v_110
+Frame_111.Name = "Eye"
+Frame_111.Name = ""
+Frame_111.Position = v_108
+Frame_111.Parent = Frame_95
+Frame_111.BackgroundTransparency = 0.97
+Frame_111.Visible = false
+Frame_111.Size = v_109
+local v_112 = UDim.new(0, 12)
+local UICorner_113 = Instance.new("UICorner")
+UICorner_113.Parent = Frame_111
+UICorner_113.Name = "UICorner"
+UICorner_113.Name = ""
+UICorner_113.CornerRadius = v_112
+local v_114 = UDim2.new(0.5, 0, 0.5, 0)
+local v_115 = UDim2.new(0, 23, 0, 23)
+local v_116 = Vector2.new(0.5, 0.5)
+local ImageLabel_117 = Instance.new("ImageLabel")
+ImageLabel_117.ScaleType = Enum.ScaleType.Stretch
+ImageLabel_117.ImageTransparency = 0.3
+ImageLabel_117.Parent = Frame_111
+ImageLabel_117.AnchorPoint = v_116
+ImageLabel_117.Image = "rbxassetid://125696236691873"
+ImageLabel_117.Name = "Icon"
+ImageLabel_117.Name = ""
+ImageLabel_117.Position = v_114
+ImageLabel_117.BackgroundTransparency = 1
+ImageLabel_117.Size = v_115
+local v_118 = NumberSequenceKeypoint.new(0, 0)
+local v_119 = NumberSequenceKeypoint.new(1, 0.562)
+local v_120 = NumberSequence.new({v_118, v_119})
+local UIGradient_121 = Instance.new("UIGradient")
+UIGradient_121.Rotation = 90
+UIGradient_121.Transparency = v_120
+UIGradient_121.Name = "UIGradient"
+UIGradient_121.Name = ""
+UIGradient_121.Parent = Frame_95
+local v_122 = UDim2.new(0, 0, 0.177, 0)
+local v_123 = UDim2.new(0.5, 0, 0, 0)
+local Frame_124 = Instance.new("Frame")
+Frame_124.BackgroundTransparency = 1
+Frame_124.Name = "RightContent"
+Frame_124.Name = ""
+Frame_124.Position = v_122
+Frame_124.Parent = Frame_9
+Frame_124.ClipsDescendants = true
+Frame_124.AutomaticSize = Enum.AutomaticSize.Y
+Frame_124.Size = v_123
+local UIListLayout_125 = Instance.new("UIListLayout")
+UIListLayout_125.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_125.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_125.Name = "UIListLayout"
+UIListLayout_125.Name = ""
+UIListLayout_125.Parent = Frame_124
+UIListLayout_125.HorizontalAlignment = Enum.HorizontalAlignment.Right
+local v_126 = UDim2.new(1, 0, 0, 45)
+local Frame_127 = Instance.new("Frame")
+Frame_127.Parent = Frame_124
+Frame_127.BackgroundTransparency = 1
+Frame_127.Name = "Buttons"
+Frame_127.Name = ""
+Frame_127.Size = v_126
+local v_128 = UDim2.new(0, 0, 0, 40)
+local v_129 = Color3.fromRGB(200, 200, 200)
+local TextButton_130 = Instance.new("TextButton")
+TextButton_130.LayoutOrder = 1
+TextButton_130.Size = v_128
+TextButton_130.Name = "Check"
+TextButton_130.Name = ""
+TextButton_130.BackgroundColor3 = v_129
+TextButton_130.Parent = Frame_127
+TextButton_130.Text = ""
+TextButton_130.AutomaticSize = Enum.AutomaticSize.X
+TextButton_130.AutoButtonColor = false
+local v_131 = UDim.new(0, 12)
+local UICorner_132 = Instance.new("UICorner")
+UICorner_132.Parent = TextButton_130
+UICorner_132.Name = "UICorner"
+UICorner_132.Name = ""
+UICorner_132.CornerRadius = v_131
+local v_133 = UDim2.new(0, 0, 1, 0)
+local v_134 = Color3.fromRGB(0, 0, 0)
+local v_135 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+local TextLabel_136 = Instance.new("TextLabel")
+TextLabel_136.FontFace = v_135
+TextLabel_136.TextColor3 = v_134
+TextLabel_136.Parent = TextButton_130
+TextLabel_136.Text = "Check Key"
+TextLabel_136.Name = "Check"
+TextLabel_136.Name = ""
+TextLabel_136.TextSize = 17
+TextLabel_136.BackgroundTransparency = 1
+TextLabel_136.AutomaticSize = Enum.AutomaticSize.X
+TextLabel_136.Size = v_133
+local v_137 = UDim.new(0, 12)
+local v_138 = UDim.new(0, 12)
+local UIPadding_139 = Instance.new("UIPadding")
+UIPadding_139.Parent = TextButton_130
+UIPadding_139.PaddingRight = v_138
+UIPadding_139.Name = "UIPadding"
+UIPadding_139.Name = ""
+UIPadding_139.PaddingLeft = v_137
+local v_140 = UDim2.new(0, 0, 0, 40)
+local TextButton_141 = Instance.new("TextButton")
+TextButton_141.Size = v_140
+TextButton_141.Name = "Keybox"
+TextButton_141.Name = ""
+TextButton_141.BackgroundTransparency = 0.97
+TextButton_141.Parent = Frame_127
+TextButton_141.Text = ""
+TextButton_141.AutomaticSize = Enum.AutomaticSize.X
+TextButton_141.AutoButtonColor = false
+local v_142 = UDim.new(0, 12)
+local UICorner_143 = Instance.new("UICorner")
+UICorner_143.Parent = TextButton_141
+UICorner_143.Name = "UICorner"
+UICorner_143.Name = ""
+UICorner_143.CornerRadius = v_142
+local v_144 = UDim2.new(0, 0, 1, 0)
+local v_145 = Color3.fromRGB(255, 255, 255)
+local v_146 = Font.new("rbxassetid://16658221428", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+local TextLabel_147 = Instance.new("TextLabel")
+TextLabel_147.FontFace = v_146
+TextLabel_147.TextColor3 = v_145
+TextLabel_147.TextTransparency = 0.3
+TextLabel_147.Text = "Get Key"
+TextLabel_147.Name = "Check"
+TextLabel_147.Name = ""
+TextLabel_147.Parent = TextButton_141
+TextLabel_147.TextSize = 17
+TextLabel_147.BackgroundTransparency = 1
+TextLabel_147.AutomaticSize = Enum.AutomaticSize.X
+TextLabel_147.Size = v_144
+local v_148 = UDim.new(0, 12)
+local v_149 = UDim.new(0, 12)
+local UIPadding_150 = Instance.new("UIPadding")
+UIPadding_150.Parent = TextButton_141
+UIPadding_150.PaddingRight = v_149
+UIPadding_150.Name = "UIPadding"
+UIPadding_150.Name = ""
+UIPadding_150.PaddingLeft = v_148
+local v_151 = Color3.fromRGB(255, 255, 255)
+local UIStroke_152 = Instance.new("UIStroke")
+UIStroke_152.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_152.Transparency = 0.94
+UIStroke_152.Name = "UIStroke"
+UIStroke_152.Name = ""
+UIStroke_152.Color = v_151
+UIStroke_152.Parent = TextButton_141
+local v_153 = NumberSequenceKeypoint.new(0, 0.569)
+local v_154 = NumberSequenceKeypoint.new(1, 0)
+local v_155 = NumberSequence.new({v_153, v_154})
+local UIGradient_156 = Instance.new("UIGradient")
+UIGradient_156.Rotation = 45
+UIGradient_156.Transparency = v_155
+UIGradient_156.Name = "UIGradient"
+UIGradient_156.Name = ""
+UIGradient_156.Parent = TextButton_141
+local v_157 = UDim.new(0, 8)
+local UIListLayout_158 = Instance.new("UIListLayout")
+UIListLayout_158.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_158.Name = "UIListLayout"
+UIListLayout_158.Name = ""
+UIListLayout_158.Parent = Frame_127
+UIListLayout_158.Padding = v_157
+UIListLayout_158.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_158.HorizontalAlignment = Enum.HorizontalAlignment.Right
+local v_159 = UDim2.new(-0.041, 0, 0, 0)
+local v_160 = UDim2.new(0, 40, 0, 40)
+local TextButton_161 = Instance.new("TextButton")
+TextButton_161.BackgroundTransparency = 0.97
+TextButton_161.Name = "Discord"
+TextButton_161.Name = ""
+TextButton_161.Position = v_159
+TextButton_161.Parent = Frame_127
+TextButton_161.Text = ""
+TextButton_161.Size = v_160
+TextButton_161.AutoButtonColor = false
+local v_162 = UDim.new(0, 12)
+local UICorner_163 = Instance.new("UICorner")
+UICorner_163.Parent = TextButton_161
+UICorner_163.Name = "UICorner"
+UICorner_163.Name = ""
+UICorner_163.CornerRadius = v_162
+local v_164 = Color3.fromRGB(255, 255, 255)
+local UIStroke_165 = Instance.new("UIStroke")
+UIStroke_165.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_165.Transparency = 0.94
+UIStroke_165.Name = "UIStroke"
+UIStroke_165.Name = ""
+UIStroke_165.Color = v_164
+UIStroke_165.Parent = TextButton_161
+local v_166 = UDim2.new(0.5, 0, 0.5, 0)
+local v_167 = UDim2.new(0, 22, 0, 22)
+local v_168 = Vector2.new(0.5, 0.5)
+local ImageLabel_169 = Instance.new("ImageLabel")
+ImageLabel_169.ScaleType = Enum.ScaleType.Stretch
+ImageLabel_169.ImageTransparency = 0.3
+ImageLabel_169.Parent = TextButton_161
+ImageLabel_169.AnchorPoint = v_168
+ImageLabel_169.Image = "rbxassetid://111352598650120"
+ImageLabel_169.Name = "Icon"
+ImageLabel_169.Name = ""
+ImageLabel_169.Position = v_166
+ImageLabel_169.BackgroundTransparency = 1
+ImageLabel_169.Size = v_167
+local v_170 = NumberSequenceKeypoint.new(0, 0.569)
+local v_171 = NumberSequenceKeypoint.new(1, 0)
+local v_172 = NumberSequence.new({v_170, v_171})
+local UIGradient_173 = Instance.new("UIGradient")
+UIGradient_173.Rotation = 45
+UIGradient_173.Transparency = v_172
+UIGradient_173.Name = "UIGradient"
+UIGradient_173.Name = ""
+UIGradient_173.Parent = TextButton_161
+local v_174 = UDim2.new(1, 0, 0, 130)
+local v_175 = UDim2.new(0, 0, 0, 0)
+local ScrollingFrame_176 = Instance.new("ScrollingFrame")
+ScrollingFrame_176.LayoutOrder = -1
+ScrollingFrame_176.ScrollBarImageTransparency = 1
+ScrollingFrame_176.ScrollBarThickness = 3
+ScrollingFrame_176.Parent = Frame_124
+ScrollingFrame_176.Name = "Changelogs"
+ScrollingFrame_176.Name = ""
+ScrollingFrame_176.AutomaticCanvasSize = Enum.AutomaticSize.Y
+ScrollingFrame_176.CanvasSize = v_175
+ScrollingFrame_176.BackgroundTransparency = 1
+ScrollingFrame_176.BorderSizePixel = 0
+ScrollingFrame_176.Size = v_174
+local v_177 = UDim2.new(1, 0, 0, 0)
+local Frame_178 = Instance.new("Frame")
+Frame_178.Name = "Announcement"
+Frame_178.Name = ""
+Frame_178.Parent = ScrollingFrame_176
+Frame_178.BackgroundTransparency = 1
+Frame_178.AutomaticSize = Enum.AutomaticSize.Y
+Frame_178.Size = v_177
+local v_179 = UDim2.new(1, 0, 0, 0)
+local v_180 = Color3.fromRGB(255, 255, 255)
+local v_181 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium)
+local TextLabel_182 = Instance.new("TextLabel")
+TextLabel_182.LayoutOrder = -1
+TextLabel_182.FontFace = v_181
+TextLabel_182.TextColor3 = v_180
+TextLabel_182.TextTransparency = 0.4
+TextLabel_182.Text = "Changelogs"
+TextLabel_182.Parent = Frame_178
+TextLabel_182.Name = "Header"
+TextLabel_182.Name = ""
+TextLabel_182.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_182.TextSize = 20
+TextLabel_182.BackgroundTransparency = 1
+TextLabel_182.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_182.Size = v_179
+local v_183 = UDim2.new(1, 0, 0, 0)
+local v_184 = Color3.fromRGB(255, 255, 255)
+local v_185 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium)
+local TextLabel_186 = Instance.new("TextLabel")
+TextLabel_186.LayoutOrder = -1
+TextLabel_186.FontFace = v_185
+TextLabel_186.TextColor3 = v_184
+TextLabel_186.TextTransparency = 0.4
+TextLabel_186.Text = "Key System Update"
+TextLabel_186.Parent = Frame_178
+TextLabel_186.Name = "Header2"
+TextLabel_186.Name = ""
+TextLabel_186.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_186.TextSize = 17
+TextLabel_186.BackgroundTransparency = 1
+TextLabel_186.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_186.Size = v_183
+local v_187 = UDim2.new(-0.004, 0, 0.716, 0)
+local v_188 = UDim2.new(1, 0, 0, 0)
+local v_189 = Color3.fromRGB(255, 255, 255)
+local v_190 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_191 = Instance.new("TextLabel")
+TextLabel_191.LayoutOrder = 1
+TextLabel_191.TextWrapped = false
+TextLabel_191.TextColor3 = v_189
+TextLabel_191.TextTransparency = 0.6
+TextLabel_191.Text = "Key System Update \n\tAdded a dragbar similar to the script ui\n\tAdded key saving\n\tFixed a few bugs\n"
+TextLabel_191.Parent = Frame_178
+TextLabel_191.FontFace = v_190
+TextLabel_191.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_191.Name = "Changelog"
+TextLabel_191.Name = ""
+TextLabel_191.Position = v_187
+TextLabel_191.TextSize = 14
+TextLabel_191.BackgroundTransparency = 1
+TextLabel_191.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_191.Size = v_188
+local v_192 = UDim2.new(1, 0, 0, 0)
+local v_193 = Color3.fromRGB(255, 255, 255)
+local v_194 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Medium)
+local TextLabel_195 = Instance.new("TextLabel")
+TextLabel_195.LayoutOrder = 2
+TextLabel_195.FontFace = v_194
+TextLabel_195.TextColor3 = v_193
+TextLabel_195.TextTransparency = 0.4
+TextLabel_195.Text = "Rivals Beta Release"
+TextLabel_195.Parent = Frame_178
+TextLabel_195.Name = "Header2"
+TextLabel_195.Name = ""
+TextLabel_195.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_195.TextSize = 17
+TextLabel_195.BackgroundTransparency = 1
+TextLabel_195.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_195.Size = v_192
+local v_196 = UDim2.new(-0.004, 0, 0.716, 0)
+local v_197 = UDim2.new(1, 0, 0, 0)
+local v_198 = Color3.fromRGB(255, 255, 255)
+local v_199 = Font.new("rbxassetid://16658221428", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+local TextLabel_200 = Instance.new("TextLabel")
+TextLabel_200.LayoutOrder = 3
+TextLabel_200.TextWrapped = false
+TextLabel_200.TextColor3 = v_198
+TextLabel_200.TextTransparency = 0.6
+TextLabel_200.Text = "Dashboard\n    Discord invite\n    Script version\n    Executor name\n    Game name\n    Server region\n    Player count\n    Job ID\n    Game ID\n\nPersonalization\n    Theme selection\n    Apply selected theme\n    Corner glow customization:\n        Top Left\n        Top Right\n        Bottom Left\n        Bottom Right\n        Visibility\n        Transparency\n        Color\n    Animation selection\n    Load animation\n    Unload animation\n    Available animation: `Parallax`\n\nBlatant\n\n    Aimbot\n        Enable/disable\n        Quick toggle keybind\n        Team check\n        Wall check\n        Require input hold\n        Input hold keybind\n        Target:\n            Head\n            HumanoidRootPart\n            Random\n        Smoothness: `0–1`\n\n    Triggerbot\n        Enable/disable\n        Quick toggle keybind\n        Team check\n        Katana check\n        Target:\n            Head\n            Body\n            Any\n        Shoot method:\n            Blatant\n            Input\n            Click\n            Hold\n        Delay: `0–1`\n\n    Projectile Aura\n        Enable/disable\n        Team check\n        Maximum pitch angle: `1–90`\n        Pitch override: `-1–90`\n        Y offset: `-10–10`\n\nRagebot\n\n    Magic Bullet\n        Enable/disable\n        Quick toggle keybind\n        Desync\n        Team check\n        Wall check\n        Katana check\n\n    Knife Aura \n        Enable/disable\n        Quick toggle keybind\n        Team check\n        Desync\n        Auto equip knife\n        Auto pick weapons\n        Auto backstab\n\nGame Visuals\n\n    Tracer Effect\n        Enable/disable\n        Local-sided tracers\n        Rainbow tracers\n        Duration: `1–1000`\n        Tracer color\n\n    Hit Sounds\n        Enable/disable\n        Random sounds\n        Volume: `0–1`\n        Sound selection:\n            Neverlose\n            Rust Headshot\n            Sparkle\n            Windows Critical\n            Bow Hit\n            Bonnie Blue\n            Among Us\n\nScreen Effects\n\n    Third Person\n        Enable/disable third-person view\n\n    Anti Flashbang\n        Enable/disable flashbang protection\n\n    Aspect Ratio\n        Enable/disable\n        X ratio: `0–1.2`\n        Y ratio: `0–1.2`\n\n    Crosshair\n        Enable/disable custom crosshair\n        Hide in-game crosshair\n        Spin crosshair\n        Spin speed: `0–20`\n        Line length: `1–50`\n        Line thickness: `1–10`\n        Line gap: `0–30`\n        Top line color\n        Bottom line color\n        Left line color\n        Right line color\n\nESP\n\n    Box ESP\n        Enable/disable\n        Team check\n        Maximum distance: `100–5000`\n        Box gradient\n        Box color 1\n        Box color 2\n        Spin gradient\n        Gradient spin speed: `10–360`\n        Box fill\n        Fill transparency: `0–1`\n        Show names\n        Name color\n        Show distances\n        Distance color\n        Health bar\n\n    Tracer ESP\n        Enable/disable\n        Team check\n        Maximum distance: `100–5000`\n        Tracer origin:\n            Bottom\n            Middle\n            Top\n        Start color\n        End color\n\n    Skeleton ESP\n        Enable/disable\n        Team check\n        Head circle\n        Transparency: `0–1`\n        Maximum distance: `100–5000`\n        Skeleton color\n        Head circle color\n\n    Chams ESP\n        Enable/disable\n        Team check\n        Fill transparency: `0–1`\n        Outline transparency: `0–1`\n        Maximum distance: `100–5000`\n        Fill color\n        Outline color\n\nPlayer\n\n    Player Behaviour\n\n        WalkSpeed\n            Custom WalkSpeed\n            Speed: `0–1000`\n\n        JumpPower\n            Custom JumpPower\n            Power: `0–1000`\n\n        Mass\n            Custom Mass\n            Mass: `-500–500`\n\n        Gravity\n            Custom Gravity\n            Gravity: `1–500`\n\nWorld\n\n    Atmosphere\n        Enable/disable\n        Density: `0–1`\n        Offset: `0–1`\n        Haze: `0–10`\n        Glare: `0–10`\n        Color\n        Decay color\n\n    Lighting\n        Custom lighting\n        Clock time: `0–24`\n        Brightness: `0–10`\n        Exposure compensation: `-5–5`\n        Ambient color\n        Outdoor ambient color\n        Top color shift\n        Bottom color shift\n\n        Bloom Effect\n            Enable/disable\n            Intensity: `0–5`\n            Size: `0–56`\n            Threshold: `0–5`\n\n        Blur Effect\n            Enable/disable\n            Size: `0–56`\n\n        Color Correction\n            Enable/disable\n            Brightness: `-1–1`\n            Contrast: `-1–1`\n            Saturation: `-1–1`\n            Tint color\n\n    Viewmodel\n\n        Left Arm\n            Left arm customization\n            Rainbow colors\n            Arm transparency: `0–1`\n            Shirt transparency: `0–1`\n            Arm color\n            Outline transparency: `0–1`\n            Fill transparency: `0–1`\n            Outline color\n            Fill color\n\n        Right Arm\n            Right arm customization\n            Rainbow colors\n            Arm transparency: `0–1`\n            Shirt transparency: `0–1`\n            Arm color\n            Outline transparency: `0–1`\n            Fill transparency: `0–1`\n            Outline color\n            Fill color\n\n        Gun Viewmodel\n            Gun customization\n            Rainbow colors\n            Gun transparency: `0–1`\n            Gun color\n            Gun material\n            Outline transparency: `0–1`\n            Fill transparency: `0–1`\n            Outline color\n            Fill color\n"
+TextLabel_200.Parent = Frame_178
+TextLabel_200.FontFace = v_199
+TextLabel_200.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_200.Name = "Changelog"
+TextLabel_200.Name = ""
+TextLabel_200.Position = v_196
+TextLabel_200.TextSize = 14
+TextLabel_200.BackgroundTransparency = 1
+TextLabel_200.AutomaticSize = Enum.AutomaticSize.Y
+TextLabel_200.Size = v_197
+local v_201 = UDim.new(0, 3)
+local UIListLayout_202 = Instance.new("UIListLayout")
+UIListLayout_202.Parent = Frame_178
+UIListLayout_202.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_202.Name = "UIListLayout"
+UIListLayout_202.Name = ""
+UIListLayout_202.Padding = v_201
+local v_203 = UDim.new(0, 2)
+local v_204 = UDim.new(0, 12)
+local UIPadding_205 = Instance.new("UIPadding")
+UIPadding_205.PaddingBottom = v_204
+UIPadding_205.PaddingTop = v_203
+UIPadding_205.Name = "UIPadding"
+UIPadding_205.Name = ""
+UIPadding_205.Parent = Frame_178
+local v_206 = UDim.new(0, 0)
+local UIListLayout_207 = Instance.new("UIListLayout")
+UIListLayout_207.Parent = ScrollingFrame_176
+UIListLayout_207.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_207.Name = "UIListLayout"
+UIListLayout_207.Name = ""
+UIListLayout_207.Padding = v_206
+-- GLOBAL (nil): bXlUdvOzlH1R8
+local v_208 = UDim2.new(0.5, 0, -0.125, 0)
+local v_209 = UDim2.new(0.3, 0, 0, 6)
+local v_210 = Vector2.new(0.5, 0)
+local v_211 = Color3.fromRGB(255, 255, 255)
+local v_212 = Color3.fromRGB(0, 0, 0)
+local Frame_213 = Instance.new("Frame")
+Frame_213.Visible = true
+Frame_213.Active = false
+Frame_213.Selectable = false
+Frame_213.AnchorPoint = v_210
+Frame_213.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame_213.ZIndex = 1
+Frame_213.AutomaticSize = Enum.AutomaticSize.None
+Frame_213.Size = v_209
+Frame_213.ClipsDescendants = false
+Frame_213.BorderColor3 = v_212
+Frame_213.BorderMode = Enum.BorderMode.Outline
+Frame_213.Parent = Folder_12
+Frame_213.Ignore = true
+Frame_213.Rotation = 0
+Frame_213.Transparency = 0.9
+Frame_213.Name = "DragBar"
+Frame_213.Name = ""
+Frame_213.Position = v_208
+Frame_213.BorderSizePixel = 0
+Frame_213.BackgroundTransparency = 0.6
+Frame_213.LayoutOrder = 0
+Frame_213.BackgroundColor3 = v_211
+local v_214 = UDim.new(1, 0)
+local UICorner_215 = Instance.new("UICorner")
+UICorner_215.Parent = Frame_213
+UICorner_215.Name = "UICorner"
+UICorner_215.Name = ""
+UICorner_215.CornerRadius = v_214
+local v_216 = Frame_213.InputBegan:Connect(fn_1)
+local v_217 = UserInputService.InputChanged:Connect(fn_2)
+-- GLOBAL (nil): Su95VMbZvA9e8
+local v_218 = UserInputService.InputEnded:Connect(fn_3)
+-- GLOBAL (nil): 22lRwo09vyvC
+-- GLOBAL (nil): 5Y9NcGoErei7i
+local v_219 = Frame_213.MouseEnter:Connect(fn_4)
+local v_220 = Frame_213.MouseLeave:Connect(fn_5)
+isfolder("Perseus") --> true
+isfile("Perseus/Key.json") --> true
+readfile("Perseus/Key.json")
+isfile("Perseus/Key.json") --> true
+readfile("Perseus/Key.json")
+-- JSONDecode("[221,204,226,210,210,218,213,234,195,197,199,201,203,205,207,209]") -> {221, 204, 226, 210, 210, 218, 213, 234, 195, 197, 199, 201, 203, 205, 207, 209}
+-- GLOBAL (nil): p2zXRwMqS6wAH
+-- GLOBAL (nil): PappL3lkmPqUk
+-- GLOBAL (nil): goAM5xGHF5hkr
+-- GLOBAL (nil): BIMyA6JbYlwuY
+luarmor_api.script_id = "c9596bc6bffaa7ccef69026a5a0df47e"
+getgenv().script_key = "SAVEDKEY12345678"
+luarmor_api.check_key("SAVEDKEY12345678")   -- script_id="c9596bc6bffaa7ccef69026a5a0df47e"
+-- [introspect] check_key
+--   L6 JZ = {[6035872082] = "c9596bc6bffaa7ccef69026a5a0df47e", [7633926880] = "5ab97c014f9eeb177d62a504bf0a3ce1"}
+--   (mock returns code=KEY_VALID)
+-- GLOBAL (nil): 9V647OTXyz1HhU
+local v_221 = ScreenGui_4:Destroy()
+local v_222 = Frame_9:Destroy()
+local v_223 = UICorner_11:Destroy()
+local v_224 = Folder_12:Destroy()
+local v_225 = ImageLabel_15:Destroy()
+local v_226 = UICorner_17:Destroy()
+local v_227 = UIStroke_19:Destroy()
+local v_228 = Frame_22:Destroy()
+local v_229 = Frame_24:Destroy()
+local v_230 = Frame_26:Destroy()
+local v_231 = UIListLayout_27:Destroy()
+local v_232 = TextLabel_30:Destroy()
+local v_233 = TextLabel_33:Destroy()
+local v_234 = Frame_35:Destroy()
+local v_235 = TextButton_37:Destroy()
+local v_236 = UICorner_39:Destroy()
+local v_237 = ImageLabel_43:Destroy()
+local v_238 = TextButton_45:Destroy()
+local v_239 = UICorner_47:Destroy()
+local v_240 = ImageLabel_51:Destroy()
+local v_241 = UIListLayout_53:Destroy()
+local v_242 = UIListLayout_55:Destroy()
+local v_243 = UIListLayout_57:Destroy()
+local v_244 = UIPadding_62:Destroy()
+local v_245 = Frame_65:Destroy()
+local v_246 = UIPadding_68:Destroy()
+local v_247 = Frame_70:Destroy()
+local v_248 = TextLabel_74:Destroy()
+local v_249 = TextLabel_78:Destroy()
+local v_250 = UIListLayout_80:Destroy()
+local v_251 = UIPadding_83:Destroy()
+local v_252 = TextLabel_87:Destroy()
+local v_253 = TextLabel_92:Destroy()
+local v_254 = UIListLayout_93:Destroy()
+local v_255 = Frame_95:Destroy()
+local v_256 = UICorner_97:Destroy()
+local v_257 = UIStroke_99:Destroy()
+local v_258 = TextBox_104:Destroy()
+local v_259 = UIPadding_107:Destroy()
+local v_260 = Frame_111:Destroy()
+local v_261 = UICorner_113:Destroy()
+local v_262 = ImageLabel_117:Destroy()
+local v_263 = UIGradient_121:Destroy()
+local v_264 = Frame_124:Destroy()
+local v_265 = UIListLayout_125:Destroy()
+local v_266 = Frame_127:Destroy()
+local v_267 = TextButton_130:Destroy()
+local v_268 = UICorner_132:Destroy()
+local v_269 = TextLabel_136:Destroy()
+local v_270 = UIPadding_139:Destroy()
+local v_271 = TextButton_141:Destroy()
+local v_272 = UICorner_143:Destroy()
+local v_273 = TextLabel_147:Destroy()
+local v_274 = UIPadding_150:Destroy()
+local v_275 = UIStroke_152:Destroy()
+local v_276 = UIGradient_156:Destroy()
+local v_277 = UIListLayout_158:Destroy()
+local v_278 = TextButton_161:Destroy()
+local v_279 = UICorner_163:Destroy()
+local v_280 = UIStroke_165:Destroy()
+local v_281 = ImageLabel_169:Destroy()
+local v_282 = UIGradient_173:Destroy()
+local v_283 = ScrollingFrame_176:Destroy()
+local v_284 = Frame_178:Destroy()
+local v_285 = TextLabel_182:Destroy()
+local v_286 = TextLabel_186:Destroy()
+local v_287 = TextLabel_191:Destroy()
+local v_288 = TextLabel_195:Destroy()
+local v_289 = TextLabel_200:Destroy()
+local v_290 = UIListLayout_202:Destroy()
+local v_291 = UIPadding_205:Destroy()
+local v_292 = UIListLayout_207:Destroy()
+local v_293 = Frame_213:Destroy()
+local v_294 = UICorner_215:Destroy()
+-- GLOBAL (nil): Y4tfXu6SPVyA
+-- task.spawn(fn_6)
+  local v_295 = Library:Notify({Title = "Perseus", CloseType = "Body Click", Duration = 5, Background = "rbxassetid://82295031952284", Content = "Loaded Saved Key.", Icon = "rbxassetid://134070681746662"})
+  -- GLOBAL (nil): 6GG5skra2VTWx
+-- GLOBAL (nil): KYPEhRgH4HPn
+luarmor_api.load_script()   -- script_id="c9596bc6bffaa7ccef69026a5a0df47e"
+-- task.spawn(fn_6)
+  local v_296 = Library:Notify({Title = "Perseus", CloseType = "Body Click", Duration = 5, Background = "rbxassetid://82295031952284", Content = "Complete The KeySystems In Order To Unlock The Scripts.", Icon = "rbxassetid://134070681746662"})
+shared.Keysystem = Frame_9
+local v_297 = TextButton_37.MouseButton1Click:Connect(fn_7)
+local v_298 = TextButton_45.MouseButton1Click:Connect(fn_8)
+local UIStroke_299 = TextButton_141:FindFirstChildOfClass("UIStroke")
+-- task.spawn(fn_9)
+  local v_300 = TextButton_141.MouseEnter:Connect(fn_10)
+  -- GLOBAL (nil): 7WmeUvwn5O1Tuv
+local UIStroke_301 = TextButton_161:FindFirstChildOfClass("UIStroke")
+-- task.spawn(fn_9)
+  local v_302 = TextButton_161.MouseEnter:Connect(fn_11)
+local UIStroke_303 = Frame_95:FindFirstChildOfClass("UIStroke")
+-- task.spawn(fn_9)
+  local v_304 = Frame_95.MouseEnter:Connect(fn_12)
+local ImageLabel_305 = TextButton_37:FindFirstChildOfClass("ImageLabel")
+-- task.spawn(fn_9)
+  local v_306 = TextButton_37.MouseEnter:Connect(fn_13)
+local ImageLabel_307 = TextButton_45:FindFirstChildOfClass("ImageLabel")
+-- task.spawn(fn_9)
+  local v_308 = TextButton_45.MouseEnter:Connect(fn_14)
+local v_309 = Color3.fromRGB(255, 255, 255)
+-- task.spawn(fn_9)
+  local v_310 = TextButton_130.MouseEnter:Connect(fn_15)
+-- task.spawn(fn_16)
+  local v_311 = TextButton_141.MouseLeave:Connect(fn_17)
+  -- GLOBAL (nil): QJKobpoY2Cyga
+-- task.spawn(fn_16)
+  local v_312 = TextButton_161.MouseLeave:Connect(fn_18)
+-- task.spawn(fn_16)
+  local v_313 = Frame_95.MouseLeave:Connect(fn_19)
+-- task.spawn(fn_16)
+  local v_314 = TextButton_37.MouseLeave:Connect(fn_20)
+-- GLOBAL (nil): 1njkj8vfHeZiQ
+-- task.spawn(fn_16)
+  local v_315 = TextButton_45.MouseLeave:Connect(fn_21)
+local v_316 = Color3.fromRGB(200, 200, 200)
+-- task.spawn(fn_16)
+  local v_317 = TextButton_130.MouseLeave:Connect(fn_22)
+local v_318 = TextButton_130.MouseButton1Click:Connect(fn_23)
+local v_319 = TextButton_161.MouseButton1Click:Connect(fn_24)
+local v_320 = TextButton_141.MouseButton1Click:Connect(fn_25)
+Frame_9.Visible = false
+-- task.spawn(fn_26)
+  local v_321 = UDim2.new(111, 222, 0, 444)
+  Frame_65.Size = v_321
+  local v_322 = UDim2.new(111, 222, 0, 444)
+  Frame_124.Size = v_322
+  Frame_65.AutomaticSize = Enum.AutomaticSize.None
+  Frame_124.AutomaticSize = Enum.AutomaticSize.None
+  UIListLayout_53.VerticalAlignment = Enum.VerticalAlignment.Center
+  local v_323 = UDim2.new(111, 222, 0, 0)
+  local v_324 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_325 = TweenService:Create(Frame_65, v_324, {Size = v_323})
+  local v_326 = v_325:Play()
+  -- GLOBAL (nil): rvNrxapK7cNkpy
+  -- GLOBAL (nil): CaDozCGaUZmJA
+  local v_327 = UDim2.new(0.5, 0, -0.75, 0)
+  local v_328 = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_329 = TweenService:Create(Frame_213, v_328, {Position = v_327})
+  local v_330 = v_329:Play()
+  local v_331 = UDim2.new(111, 222, 0, 0)
+  local v_332 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_333 = TweenService:Create(Frame_124, v_332, {Size = v_331})
+  local v_334 = v_333:Play()
+  task.wait(0.31)
+  Frame_65.Visible = false
+  Frame_124.Visible = false
+task.wait(0.31)
+-- task.spawn(fn_27)
+  Frame_65.Visible = true
+  Frame_124.Visible = true
+  UIListLayout_53.VerticalAlignment = Enum.VerticalAlignment.Top
+  local v_335 = UDim2.new(111, 222, 0, 444)
+  local v_336 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_337 = TweenService:Create(Frame_65, v_336, {Size = v_335})
+  local v_338 = v_337:Play()
+  local v_339 = UDim2.new(0.5, 0, -0.125, 0)
+  local v_340 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_341 = TweenService:Create(Frame_213, v_340, {Position = v_339})
+  local v_342 = v_341:Play()
+  local v_343 = UDim2.new(111, 222, 0, 444)
+  local v_344 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_345 = TweenService:Create(Frame_124, v_344, {Size = v_343})
+  local v_346 = v_345:Play()
+  task.wait(0.32)
+  Frame_65.AutomaticSize = Enum.AutomaticSize.Y
+  Frame_124.AutomaticSize = Enum.AutomaticSize.Y
+  -- GLOBAL (nil): pJlFNcLkNRWW
+Frame_9.Visible = true
+-- main chunk returned 0 value(s)
+-- ======== callbacks
+-- (user types into TextBox_104: "TESTKEY-AAAA-BBBB-CCCC")
+-- >>> invoking callback fn_1 registered on Frame_213.InputBegan
+  -- GLOBAL (nil): STEnvwRUBHUu
+  local v_347 = RunService.Heartbeat:Connect(fn_28)
+-- >>> invoking callback fn_2 registered on UserInputService.InputChanged
+  local v_348 = UDim2.new(111, (222 + (input.Position - input.Position).X), 111, (222 + (input.Position - input.Position).Y))
+  -- GLOBAL (nil): E4XCUtJhK5Frtr
+  -- GLOBAL (nil): wvaRmi8SLWti
+-- >>> invoking callback fn_3 registered on UserInputService.InputEnded
+  local v_349 = v_347:Disconnect()
+  -- GLOBAL (nil): fbcaQNm9RwtE6
+  -- GLOBAL (nil): lldyNIb4f3kX
+  -- task.spawn(fn_29)
+    local v_350 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_351 = TweenService:Create(Frame_213, v_350, {BackgroundTransparency = 0.9})
+    local v_352 = v_351:Play()
+    -- GLOBAL (nil): SxqB4zsOHyV0Zt
+  -- GLOBAL (nil): 0TjDpMU8gybmiX
+-- >>> invoking callback fn_4 registered on Frame_213.MouseEnter
+  -- task.spawn(fn_30)
+    -- GLOBAL (nil): O9ZtsuG00Mxg8
+    local v_353 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_354 = TweenService:Create(Frame_213, v_353, {BackgroundTransparency = 0.2})
+    local v_355 = v_354:Play()
+  -- GLOBAL (nil): 9dVVaUNh0IFo
+-- >>> invoking callback fn_5 registered on Frame_213.MouseLeave
+  -- task.spawn(fn_31)
+    -- GLOBAL (nil): JOVmq1UN8ia2
+    -- GLOBAL (nil): TX7TZCN8ZwyE
+    local v_356 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_357 = TweenService:Create(Frame_213, v_356, {BackgroundTransparency = 0.6})
+    local v_358 = v_357:Play()
+  -- GLOBAL (nil): zPIf4LCPNOPIDr
+-- >>> invoking callback fn_7 registered on TextButton_37.MouseButton1Click
+  local v_359 = Library:Notify({CloseType = "Body Click", Title = "Close Interface", Buttons = {{Title = "Unload Interface", Callback = fn_32}, {Callback = fn_33, Title = "Cancel", DestroyOnClick = true}}, Duration = 15, Background = "rbxassetid://82295031952284", Content = "Are you sure that you want to unload the UI?", Icon = "solar:shield-warning-bold"})
+  -- GLOBAL (nil): 0maCoYkeoYuw
+-- >>> invoking callback fn_8 registered on TextButton_45.MouseButton1Click
+  -- task.spawn(fn_26)
+    local v_360 = UDim2.new(111, 222, 0, 444)
+    Frame_65.Size = v_360
+    local v_361 = UDim2.new(111, 222, 0, 444)
+    Frame_124.Size = v_361
+    Frame_65.AutomaticSize = Enum.AutomaticSize.None
+    Frame_124.AutomaticSize = Enum.AutomaticSize.None
+    UIListLayout_53.VerticalAlignment = Enum.VerticalAlignment.Center
+    local v_362 = UDim2.new(111, 222, 0, 0)
+    local v_363 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_364 = TweenService:Create(Frame_65, v_363, {Size = v_362})
+    local v_365 = v_364:Play()
+    local v_366 = UDim2.new(0.5, 0, -0.75, 0)
+    local v_367 = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_368 = TweenService:Create(Frame_213, v_367, {Position = v_366})
+    local v_369 = v_368:Play()
+    local v_370 = UDim2.new(111, 222, 0, 0)
+    local v_371 = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+    local v_372 = TweenService:Create(Frame_124, v_371, {Size = v_370})
+    local v_373 = v_372:Play()
+    task.wait(0.31)
+    Frame_65.Visible = false
+    Frame_124.Visible = false
+  -- GLOBAL (nil): 0cmAa7xEREsUHc
+-- >>> invoking callback fn_10 registered on TextButton_141.MouseEnter
+  local v_374 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_375 = TweenService:Create(TextButton_141, v_374, {BackgroundTransparency = 0.93})
+  local v_376 = v_375:Play()
+  local v_377 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_378 = TweenService:Create(UIStroke_299, v_377, {Transparency = 0.9})
+  local v_379 = v_378:Play()
+  -- GLOBAL (nil): ykWjDWHVfBkT1
+-- >>> invoking callback fn_11 registered on TextButton_161.MouseEnter
+  local v_380 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_381 = TweenService:Create(TextButton_161, v_380, {BackgroundTransparency = 0.93})
+  local v_382 = v_381:Play()
+  local v_383 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_384 = TweenService:Create(UIStroke_301, v_383, {Transparency = 0.9})
+  local v_385 = v_384:Play()
+-- >>> invoking callback fn_12 registered on Frame_95.MouseEnter
+  local v_386 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_387 = TweenService:Create(Frame_95, v_386, {BackgroundTransparency = 0.93})
+  local v_388 = v_387:Play()
+  local v_389 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_390 = TweenService:Create(UIStroke_303, v_389, {Transparency = 0.9})
+  local v_391 = v_390:Play()
+-- >>> invoking callback fn_13 registered on TextButton_37.MouseEnter
+  local v_392 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_393 = TweenService:Create(TextButton_37, v_392, {BackgroundTransparency = 0.95})
+  local v_394 = v_393:Play()
+  local v_395 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_396 = TweenService:Create(ImageLabel_305, v_395, {ImageTransparency = 0.25})
+  local v_397 = v_396:Play()
+-- >>> invoking callback fn_14 registered on TextButton_45.MouseEnter
+  local v_398 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_399 = TweenService:Create(TextButton_45, v_398, {BackgroundTransparency = 0.95})
+  local v_400 = v_399:Play()
+  local v_401 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_402 = TweenService:Create(ImageLabel_307, v_401, {ImageTransparency = 0.25})
+  local v_403 = v_402:Play()
+-- >>> invoking callback fn_15 registered on TextButton_130.MouseEnter
+  local v_404 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_405 = TweenService:Create(TextButton_130, v_404, {BackgroundColor3 = v_309})
+  local v_406 = v_405:Play()
+-- >>> invoking callback fn_17 registered on TextButton_141.MouseLeave
+  local v_407 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_408 = TweenService:Create(TextButton_141, v_407, {BackgroundTransparency = 0.97})
+  local v_409 = v_408:Play()
+  local v_410 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_411 = TweenService:Create(UIStroke_299, v_410, {Transparency = 0.94})
+  local v_412 = v_411:Play()
+  -- GLOBAL (nil): wij9OHqyweT7
+-- >>> invoking callback fn_18 registered on TextButton_161.MouseLeave
+  local v_413 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_414 = TweenService:Create(TextButton_161, v_413, {BackgroundTransparency = 0.97})
+  local v_415 = v_414:Play()
+  local v_416 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_417 = TweenService:Create(UIStroke_301, v_416, {Transparency = 0.94})
+  local v_418 = v_417:Play()
+-- >>> invoking callback fn_19 registered on Frame_95.MouseLeave
+  local v_419 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_420 = TweenService:Create(Frame_95, v_419, {BackgroundTransparency = 0.97})
+  local v_421 = v_420:Play()
+  local v_422 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_423 = TweenService:Create(UIStroke_303, v_422, {Transparency = 0.94})
+  local v_424 = v_423:Play()
+-- >>> invoking callback fn_20 registered on TextButton_37.MouseLeave
+  local v_425 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_426 = TweenService:Create(TextButton_37, v_425, {BackgroundTransparency = 1})
+  local v_427 = v_426:Play()
+  local v_428 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_429 = TweenService:Create(ImageLabel_305, v_428, {ImageTransparency = 0.4})
+  local v_430 = v_429:Play()
+-- >>> invoking callback fn_21 registered on TextButton_45.MouseLeave
+  local v_431 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_432 = TweenService:Create(TextButton_45, v_431, {BackgroundTransparency = 1})
+  local v_433 = v_432:Play()
+  local v_434 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_435 = TweenService:Create(ImageLabel_307, v_434, {ImageTransparency = 0.4})
+  local v_436 = v_435:Play()
+-- >>> invoking callback fn_22 registered on TextButton_130.MouseLeave
+  local v_437 = TweenInfo.new(0.25, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+  local v_438 = TweenService:Create(TextButton_130, v_437, {BackgroundColor3 = v_316})
+  local v_439 = v_438:Play()
+-- >>> invoking callback fn_23 registered on TextButton_130.MouseButton1Click
+  luarmor_api.script_id = "c9596bc6bffaa7ccef69026a5a0df47e"
+  luarmor_api.check_key("TESTKEY-AAAA-BBBB-CCCC")   -- script_id="c9596bc6bffaa7ccef69026a5a0df47e"
+  -- [introspect] check_key
+  --   (mock returns code=KEY_VALID)
+  -- GLOBAL (nil): 819QxWS1i8ty7
+  -- task.spawn(fn_6)
+    local v_440 = Library:Notify({Title = "Perseus", CloseType = "Body Click", Duration = 5, Background = "rbxassetid://82295031952284", Content = "Key is correct, Loading the script...", Icon = "rbxassetid://134070681746662"})
+  -- GLOBAL (nil): uLBoNs5JTmUlsH
+  -- JSONEncode -> "[222,208,223,225,217,212,233,190,211,212,213,214,195,217,218,219,220,200,223,224,225,226]"
+  writefile("Perseus/Key.json", "[222,208,223,225,217,212,233,190,211,212,213,214,195,217,218,219,220,200,223,224,225,226]")
+  -- GLOBAL (nil): 2wRmFIQjPFHmeA
+  luarmor_api.load_script()   -- script_id="c9596bc6bffaa7ccef69026a5a0df47e"
+  -- GLOBAL (nil): meBUWW60juo4Ve
+-- >>> invoking callback fn_24 registered on TextButton_161.MouseButton1Click
+  setclipboard("https://discord.gg/b2hbaJHVfF")
+  -- task.spawn(fn_6)
+    local v_441 = Library:Notify({Title = "Perseus", CloseType = "Body Click", Duration = 5, Background = "rbxassetid://82295031952284", Content = "Copied invite to clipboard.", Icon = "rbxassetid://134070681746662"})
+  HttpService:GenerateGUID(false)  --> "{00000000-1111-2222-3333-444444444444}"
+  -- JSONEncode -> "{\"args\":{\"code\":\"njZMktNrj6\"},\"cmd\":\"INVITE_BROWSER\",\"nonce\":\"{00000000-1111-2222-3333-444444444444}\"}"
+  -- (request via syn.request)
+  -- request({Body = "{\"args\":{\"code\":\"njZMktNrj6\"},\"cmd\":\"INVITE_BROWSER\",\"nonce\":\"{00000000-1111-2222-3333-444444444444}\"}", Url = "http://127.0.0.1:6463/rpc?v=1", Method = "POST", Headers = {Origin = "https://discord.com", ["Content-Type"] = "application/json"}})
+  -- HTTP REQUEST POST "http://127.0.0.1:6463/rpc?v=1"
+  -- GLOBAL (nil): eydN13X02p9Z5
+  -- GLOBAL (nil): nHkidQDBpwMg
+-- >>> invoking callback fn_25 registered on TextButton_141.MouseButton1Click
+  setclipboard("https://discord.gg/b2hbaJHVfF")
+  -- task.spawn(fn_6)
+    local v_442 = Library:Notify({Title = "Perseus", CloseType = "Body Click", Duration = 5, Background = "rbxassetid://82295031952284", Content = "Copied invite to clipboard.", Icon = "rbxassetid://134070681746662"})
+  HttpService:GenerateGUID(false)  --> "{00000000-1111-2222-3333-444444444444}"
+  -- JSONEncode -> "{\"args\":{\"code\":\"njZMktNrj6\"},\"cmd\":\"INVITE_BROWSER\",\"nonce\":\"{00000000-1111-2222-3333-444444444444}\"}"
+  -- (request via syn.request)
+  -- request({Body = "{\"args\":{\"code\":\"njZMktNrj6\"},\"cmd\":\"INVITE_BROWSER\",\"nonce\":\"{00000000-1111-2222-3333-444444444444}\"}", Url = "http://127.0.0.1:6463/rpc?v=1", Method = "POST", Headers = {Origin = "https://discord.com", ["Content-Type"] = "application/json"}})
+  -- HTTP REQUEST POST "http://127.0.0.1:6463/rpc?v=1"
+  -- GLOBAL (nil): igtFywAOXKrzr
+  -- GLOBAL (nil): YN60EujzDSW2
+-- >>> invoking callback fn_28 registered on RunService.Heartbeat
+  local v_443 = v_5:Lerp(v_348, 0.27385096292631)
+  Frame_9.Position = v_443
+  -- GLOBAL (nil): akoMHDVE70Ee7
+-- >>> invoking callback fn_32 registered on Library:Notify{Callback}
+  local v_444 = Library:DisconnectAllConnections()
+  local v_445 = Library:DisconnectAllSignals()
+  local v_446 = Library:DestroyAll()
+  -- GLOBAL (nil): qUmMAjoh1CLxY
+-- >>> invoking callback fn_33 registered on Library:Notify{Callback}
+  -- GLOBAL (nil): 4VSIAqwrGePr2
